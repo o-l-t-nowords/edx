@@ -315,7 +315,6 @@ impl EasyDirect3D {
         let buffer_desc = Self::get_buffer_desc(&window, refresh_rate);
         let sample_desc = Self::get_sample_desk();
         let swapchain_desc = Self::get_swapchain_desc(&window, buffer_desc, sample_desc);
-        let create_device_and_swapchain = Self::create_device_and_swapchain(&window, module);
         let (swapchain, device, context) = Self::create_device(&window, &swapchain_desc, &feature_levels);
         let methods_table = Self::create_vtable(swapchain, device, context);
 
