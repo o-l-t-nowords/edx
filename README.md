@@ -14,30 +14,28 @@
 - работы с шейдерами и вершинами
 - прямого доступа к таблицам виртуальных функций (VTable)
 
-Проект написан на Rust. :contentReference[oaicite:0]{index=0}
-
 ## Архитектура / структура
 
-src/
-├── dependencies/ — обертки и вспомогательные зависимости
-│ └── mod.rs
-│
-├── directx/ — работа с DirectX (графический API)
-│ ├── d3d.rs — взаимодействие с Direct3D
-│ ├── dxgi.rs — взаимодействие с DXGI (swapchain, адаптеры)
-│ └── mod.rs
-│
-├── window/ — управление окнами и контекстом рендера
-│ ├── mod.rs
-│ ├── window_class_handle.rs — регистрация и работа с оконным классом
-│ └── window_handle.rs — управление окном (HWND)
-│
-├── renderer.rs — основной рендерер
-├── shader.rs — шейдеры
-├── vertex.rs — работа с вершинами
-├── vtable.rs — таблицы виртуальных функций (VTable)
-│
-└─── lib.rs — инициализация / связка компонентов
+src/  
+├── dependencies/ — обертки и вспомогательные зависимости  
+│ └── mod.rs  
+│  
+├── directx/ — работа с DirectX (графический API)  
+│ ├── d3d.rs — взаимодействие с Direct3D  
+│ ├── dxgi.rs — взаимодействие с DXGI (swapchain, адаптеры)  
+│ └── mod.rs  
+│  
+├── window/ — управление окнами и контекстом рендера  
+│ ├── mod.rs  
+│ ├── window_class_handle.rs — регистрация и работа с оконным классом  
+│ └── window_handle.rs — управление окном (HWND)  
+│  
+├── renderer.rs — основной рендерер  
+├── shader.rs — шейдеры  
+├── vertex.rs — работа с вершинами  
+├── vtable.rs — таблицы виртуальных функций (VTable)  
+│  
+└─── lib.rs — инициализация / связка компонентов  
 
 Файл `Cargo.toml` описывает зависимости и конфигурацию. :contentReference[oaicite:1]{index=1}  
 Есть `Cargo.lock` для фиксированных версий зависимостей. :contentReference[oaicite:2]{index=2}
